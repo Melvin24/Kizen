@@ -1,7 +1,36 @@
 /* 
   Localizable.strings
-  Kizen
+  FruitViewer
 
-  Created by John, Melvin (Associate Software Developer) on 03/09/2017.
-  Copyright © 2017 John, Melvin (Associate Software Developer). All rights reserved.
 */
+
+/// Fruit List View Controller Title
+"fruit-list.title" = "Fruit Viewer";
+
+/// API bad response.
+"fruit-list-api-bad-response.reason" = "Oops, the app did not understand the API response data.";
+
+/// API did not return any data.
+"fruit-list-api-no-response.reason" = "Oops, the API did not return any data.";
+
+/// Unexpected error.
+"unexpected-error.reason" = "Oops, an unexpected error encountered.";
+
+/// No network connection.
+"no-network-connection.reason" = "Looks like you have no network connection, Please try again.";
+
+/// No Fruits To Show.
+"no-fruits-to-show.reason" = "Oops, did not find any fruits to show you.";
+
+/// Fruit Price Title.
+"fruit-price.title" = "Price: £{{price}}";
+
+/// Fruit Price Invalid Title.
+"fruit-price_invalid.title" = "Price: No price to show.";
+
+/// Fruit Weight Title.
+"fruit-weight.title" = "Weight: {{weight}} KG";
+
+/// Fruit Weight Invalid Title.
+"fruit-weight_invalid.title" = "Weight: No weight to show.";
+

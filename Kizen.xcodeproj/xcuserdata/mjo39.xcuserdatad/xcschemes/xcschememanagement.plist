@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Kizen.xcscheme</key>
+		<key>FruitViewer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7A0D36AB1F5C124C008EE893</key>
+		<key>7A8F42551FC75A3400E57FAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A0D36BF1F5C124C008EE893</key>
+		<key>7A8F42691FC75A3400E57FAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
