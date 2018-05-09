@@ -18,23 +18,24 @@ class MainPresenter: Presenter {
     
     /// Call this method to load any required data.
     func loadIfRequired() {
-        
+
         let viewControllerFactory = ViewControllerFactory()
         
         let fruitViewModel = FruitViewModel(fruit: Fruit(price: 12, type: .apple, weight: 12, image: nil, name: "apple"))
         
         let tabBarViewControllers: [UIViewController] = menuItems.flatMap {
             
-            let tabBarViewController = viewControllerFactory.makeViewController(from: $0.menuType)
-            tabBarViewController?.tabBarItem = UITabBarItem(title: $0.title, image: $0.icon, selectedImage: nil)
+            guard let tabBarViewController = viewControllerFactory.makeViewController(from: $0.menuType) as? DetailedViewerViewController else {
+                return nil
+            }
             
-            let coordinator: Coordinatable = DetailedViewerNavigationCoordinator()
+            tabBarViewController.tabBarItem = UITabBarItem(title: $0.title, image: $0.icon, selectedImage: nil)
             
             let userInfo = (fruitViewModel: fruitViewModel, shouldHideDetails: false)
             
-            try? coordinator.prepareForNavigation(source: self.viewController,
-                                                  destination: tabBarViewController,
-                                                  userInfo: userInfo)
+            let coordinator = DetailedViewerNavigationCoordinator(destination: tabBarViewController, userInfo: userInfo)
+            
+            coordinator.prepareForNavigation()
             
             return tabBarViewController
             

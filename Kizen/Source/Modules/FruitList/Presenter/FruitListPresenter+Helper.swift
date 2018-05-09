@@ -13,17 +13,21 @@ extension FruitListPresenter {
     /// - Returns: DetailedViewerViewController.
     func detailedPhotoViewerViewController(with fruitViewModel: FruitViewModel, shouldHideDetails: Bool = false) -> DetailedViewerViewController? {
 
-        let coordinator: Coordinatable = DetailedViewerNavigationCoordinator()
-
-        let destination = UIStoryboard.instantiateViewControllerFromStoryboard(withName: DetailedViewerViewController.Storyboard.name) as? DetailedViewerViewController
-
-        let userInfo = (fruitViewModel: fruitViewModel, shouldHideDetails: shouldHideDetails)
-        
-        try? coordinator.prepareForNavigation(source: self.viewController,
-                                         destination: destination,
-                                            userInfo: userInfo)
-
-        return destination
+//        let coordinator = DetailedViewerNavigationCoordinator(destination: <#DetailedViewerViewController#>)
+//
+//        guard let viewController = self.viewController,
+//              let destination = UIStoryboard.instantiateViewControllerFromStoryboard(withName: DetailedViewerViewController.Storyboard.name) as? DetailedViewerViewController else {
+//            return nil
+//        }
+//
+//        let userInfo = (fruitViewModel: fruitViewModel, shouldHideDetails: shouldHideDetails)
+//
+//        coordinator.prepareForNavigation(source: viewController,
+//                                         destination: destination,
+//                                         userInfo: userInfo)
+//
+//        return destination
+        return nil
     }
 
     /// Call this method to obtain a loading view.

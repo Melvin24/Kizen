@@ -13,13 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let mainWindow = UIWindow(frame: UIScreen.main.bounds)
         
-        let mainViewController = UIStoryboard.instantiateViewControllerFromStoryboard(withName: MainTabBarController.Storyboard.name)
-        let navigationCoordinator = MainNavigationCoordinator()
+        guard let onboardingPageViewController = UIStoryboard.instantiateViewControllerFromStoryboard(withName: OnboardingPageViewController.Storyboard.name) as? OnboardingPageViewController else {
+            return true
+        }
         
-        try? navigationCoordinator.prepareForNavigation(source: window, destination: mainViewController, userInfo: nil)
+        let navigationCoordinator = OnboardingNavigationCoordinator(destination: onboardingPageViewController)
+        
+        navigationCoordinator.prepareForNavigation()
         
         window = mainWindow
-        window?.rootViewController = mainViewController
+        
+        window?.rootViewController = onboardingPageViewController
         window?.makeKeyAndVisible()
         
         return true

@@ -2,15 +2,13 @@
 //  MainNavigationCoordinator.swift
 //  FruitViewer
 
-import Foundation
+import UIKit
 
-class MainNavigationCoordinator: Coordinatable {
+struct MainNavigationCoordinator: Coordinatable {
     
-    func prepareForNavigation<From, To>(source: From, destination: To, userInfo: Any?) throws {
-        
-        guard let destination = destination as? MainTabBarController else {
-            throw CoordinateError.unsupported("Coordination isnt supported")
-        }
+    let destination: MainTabBarController
+    
+    func prepareForNavigation() {
         
         let menuItems = [Menu(type: .logs, title: "Logs"),
                          Menu(type: .progress, title: "Progress"),

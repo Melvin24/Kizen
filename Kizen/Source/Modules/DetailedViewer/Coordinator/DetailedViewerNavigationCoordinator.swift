@@ -5,24 +5,22 @@
 import UIKit
 
 /// Navigation coordinator for Detailed Viewer, used for dependency injection. 
-class DetailedViewerNavigationCoordinator: Coordinatable {
+struct DetailedViewerNavigationCoordinator: Coordinatable {
     
-    func prepareForNavigation<From, To>(source: From, destination: To, userInfo: Any?) throws {
-        
-        guard let destination = destination as? DetailedViewerViewController else {
-            throw CoordinateError.unsupported("Coordination isnt supported")
-        }
-        
-        guard let userInfo = userInfo as? (fruitViewModel: FruitViewModel, shouldHideDetails: Bool) else {
-            throw CoordinateError.unsupported("Coordinationexpected a UIImage as user info")
-        }
-        
+    typealias UserInfo = (fruitViewModel: FruitViewModel, shouldHideDetails: Bool)
+    
+    let destination: DetailedViewerViewController
+    let userInfo: UserInfo
+    
+    func prepareForNavigation() {
+
         let presenter = DetailedViewerPresenter(withFruitViewModel: userInfo.fruitViewModel,
-                                                 shouldHideDetails: userInfo.shouldHideDetails)
+                                                shouldHideDetails: userInfo.shouldHideDetails)
         
         presenter.viewController = destination
         
         destination.presenter = presenter
         
     }
+
 }

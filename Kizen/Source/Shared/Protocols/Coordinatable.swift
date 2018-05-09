@@ -2,8 +2,6 @@
 //  Coordinatable.swift
 //  FruitViewer
 
-import Foundation
-
 /// Errors produced from coordinating
 enum CoordinateError: Error {
     
@@ -16,12 +14,7 @@ enum CoordinateError: Error {
 protocol Coordinatable {
     
     /// Prepare the destination for navigation.
-    ///
-    /// - parameter source:      The source object.
-    /// - parameter destination: The destination object.
-    /// - parameter userInfo:    Additional info for preparing for navigation.
-    ///
-    /// - throws: If the coordination fails.
-    func prepareForNavigation<From, To>(source: From, destination: To, userInfo: Any?) throws
+    func prepareForNavigation()
     
 }
+

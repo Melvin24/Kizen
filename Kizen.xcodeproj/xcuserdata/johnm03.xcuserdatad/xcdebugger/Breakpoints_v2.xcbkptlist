@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kizen/Source/Modules/Main/Presenter/MainPresenter.swift"
-            timestampString = "545857914.3030159"
+            timestampString = "547231630.606575"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "loadIfRequired()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kizen/Source/Modules/Main/Coordinator/MainNavigationCoordinator.swift"
-            timestampString = "545857914.303094"
+            timestampString = "547231630.606706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "prepareForNavigation(source:destination:userInfo:)"
-            landmarkType = "7">
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "MainNavigationCoordinator"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Kizen/Source/Modules/Main/Coordinator/MainNavigationCoordinator.swift"
-            timestampString = "545857914.303153"
+            filePath = "Kizen/Source/AppDelegate.swift"
+            timestampString = "547231630.606777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "prepareForNavigation(source:destination:userInfo:)"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

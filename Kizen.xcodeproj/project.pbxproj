@@ -57,7 +57,17 @@
 		7AD563121FC9C2EA00215F55 /* UsageStatsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD563111FC9C2EA00215F55 /* UsageStatsNetworkService.swift */; };
 		7AD563141FC9C6CA00215F55 /* NetworkServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD563131FC9C6CA00215F55 /* NetworkServiceError.swift */; };
 		7AD563181FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD563171FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift */; };
+		E1008FD42094DADC00510BF0 /* OnboardingNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1008FD32094DADC00510BF0 /* OnboardingNavigationCoordinator.swift */; };
+		E1008FD62094DB1900510BF0 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1008FD52094DB1900510BF0 /* OnboardingPresenter.swift */; };
+		E1008FDE2095FF5400510BF0 /* OnboardingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1008FDD2095FF5400510BF0 /* OnboardingPage.storyboard */; };
+		E1008FE02095FF6C00510BF0 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1008FDF2095FF6C00510BF0 /* OnboardingPage.swift */; };
+		E1008FE42095FFC800510BF0 /* OnboardingPageNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1008FE32095FFC800510BF0 /* OnboardingPageNavigationCoordinator.swift */; };
+		E1008FE62096004200510BF0 /* OnboardingPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1008FE52096004200510BF0 /* OnboardingPagePresenter.swift */; };
+		E1188E922094C50600D2F61B /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1188E912094C50600D2F61B /* Onboarding.storyboard */; };
+		E1188E942094C53500D2F61B /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1188E932094C53500D2F61B /* OnboardingPageViewController.swift */; };
 		E126608A20891D320039F2F9 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E126608920891D320039F2F9 /* ViewControllerFactory.swift */; };
+		E16717D5209DE1BE00F52635 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16717D3209DE1BE00F52635 /* OnboardingPageView.swift */; };
+		E16717D6209DE1BE00F52635 /* OnboardingPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16717D4209DE1BE00F52635 /* OnboardingPageView.xib */; };
 		E191117F2086724100A88564 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191117E2086724100A88564 /* MenuViewModel.swift */; };
 		E19111822086727300A88564 /* MenuViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19111812086727300A88564 /* MenuViewModelFactory.swift */; };
 		E1C94DE02086710100F8AC74 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C94DDF2086710100F8AC74 /* Menu.swift */; };
@@ -132,7 +142,17 @@
 		7AD563111FC9C2EA00215F55 /* UsageStatsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsNetworkService.swift; sourceTree = "<group>"; };
 		7AD563131FC9C6CA00215F55 /* NetworkServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceError.swift; sourceTree = "<group>"; };
 		7AD563171FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+ResponseType.swift"; sourceTree = "<group>"; };
+		E1008FD32094DADC00510BF0 /* OnboardingNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationCoordinator.swift; sourceTree = "<group>"; };
+		E1008FD52094DB1900510BF0 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		E1008FDD2095FF5400510BF0 /* OnboardingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingPage.storyboard; sourceTree = "<group>"; };
+		E1008FDF2095FF6C00510BF0 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		E1008FE32095FFC800510BF0 /* OnboardingPageNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageNavigationCoordinator.swift; sourceTree = "<group>"; };
+		E1008FE52096004200510BF0 /* OnboardingPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPagePresenter.swift; sourceTree = "<group>"; };
+		E1188E912094C50600D2F61B /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		E1188E932094C53500D2F61B /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		E126608920891D320039F2F9 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		E16717D3209DE1BE00F52635 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
+		E16717D4209DE1BE00F52635 /* OnboardingPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingPageView.xib; sourceTree = "<group>"; };
 		E191117E2086724100A88564 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		E19111812086727300A88564 /* MenuViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelFactory.swift; sourceTree = "<group>"; };
 		E1C94DDF2086710100F8AC74 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -296,6 +316,8 @@
 		7A8F428B1FC75BCC00E57FAC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E1008FD72095FCF800510BF0 /* OnboardingPage */,
+				E1188E892094C45300D2F61B /* Onboarding */,
 				7A1DDF601FC96464000D21B7 /* FruitList */,
 				7A8F428C1FC75BCC00E57FAC /* DetailedViewer */,
 				7A8F42951FC75BCC00E57FAC /* Main */,
@@ -529,6 +551,110 @@
 			path = HTTPURLResponse;
 			sourceTree = "<group>";
 		};
+		E1008FD72095FCF800510BF0 /* OnboardingPage */ = {
+			isa = PBXGroup;
+			children = (
+				E1008FE12095FFAB00510BF0 /* Coordinator */,
+				E1008FDC2095FCF800510BF0 /* Interactor */,
+				E1008FD92095FCF800510BF0 /* Presenter */,
+				E1008FD82095FCF800510BF0 /* Storyboard */,
+				E1008FDA2095FCF800510BF0 /* View */,
+				E1008FDB2095FCF800510BF0 /* ViewController */,
+			);
+			path = OnboardingPage;
+			sourceTree = "<group>";
+		};
+		E1008FD82095FCF800510BF0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E1008FDD2095FF5400510BF0 /* OnboardingPage.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E1008FD92095FCF800510BF0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E1008FE52096004200510BF0 /* OnboardingPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E1008FDA2095FCF800510BF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E16717D3209DE1BE00F52635 /* OnboardingPageView.swift */,
+				E16717D4209DE1BE00F52635 /* OnboardingPageView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1008FDB2095FCF800510BF0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1008FDF2095FF6C00510BF0 /* OnboardingPage.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E1008FDC2095FCF800510BF0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E1008FE12095FFAB00510BF0 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E1008FE32095FFC800510BF0 /* OnboardingPageNavigationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E1188E892094C45300D2F61B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E1188E8B2094C4C400D2F61B /* Coordinator */,
+				E1188E8C2094C4C400D2F61B /* Presenter */,
+				E1188E902094C4EB00D2F61B /* Storyboard */,
+				E1188E8E2094C4C500D2F61B /* ViewController */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E1188E8B2094C4C400D2F61B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E1008FD32094DADC00510BF0 /* OnboardingNavigationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E1188E8C2094C4C400D2F61B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E1008FD52094DB1900510BF0 /* OnboardingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E1188E8E2094C4C500D2F61B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1188E932094C53500D2F61B /* OnboardingPageViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E1188E902094C4EB00D2F61B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E1188E912094C50600D2F61B /* Onboarding.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		E126608820891D220039F2F9 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,9 +835,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8F42831FC75AED00E57FAC /* LaunchScreen.storyboard in Resources */,
+				E1008FDE2095FF5400510BF0 /* OnboardingPage.storyboard in Resources */,
+				E1188E922094C50600D2F61B /* Onboarding.storyboard in Resources */,
 				7A8F42861FC75B3E00E57FAC /* Localizable.strings in Resources */,
 				7A8F42D91FC75BCC00E57FAC /* DetailedViewer.storyboard in Resources */,
 				7A1DDF7A1FC96464000D21B7 /* FruitList.storyboard in Resources */,
+				E16717D6209DE1BE00F52635 /* OnboardingPageView.xib in Resources */,
 				7A1DDF7C1FC96464000D21B7 /* FruitListCell.xib in Resources */,
 				7A8F42DD1FC75BCC00E57FAC /* Main.storyboard in Resources */,
 				7A8F42FA1FC75BCC00E57FAC /* ErrorView.xib in Resources */,
@@ -739,7 +868,9 @@
 				7A8F42F71FC75BCC00E57FAC /* Reuseable.swift in Sources */,
 				7A1DDF771FC96464000D21B7 /* CollectionViewDelegate.swift in Sources */,
 				7A1DDF781FC96464000D21B7 /* FruitListPresenter+Helper.swift in Sources */,
+				E1008FE02095FF6C00510BF0 /* OnboardingPage.swift in Sources */,
 				7A8F42ED1FC75BCC00E57FAC /* Strings.swift in Sources */,
+				E1188E942094C53500D2F61B /* OnboardingPageViewController.swift in Sources */,
 				7A8F42F21FC75BCC00E57FAC /* CanShowStatusView.swift in Sources */,
 				7A1DDF7B1FC96464000D21B7 /* FruitListCell.swift in Sources */,
 				7A8F42DE1FC75BCC00E57FAC /* MainTabBarController.swift in Sources */,
@@ -748,10 +879,13 @@
 				7A1DDF791FC96464000D21B7 /* FruitListPresenter.swift in Sources */,
 				7A8F42F11FC75BCC00E57FAC /* CanInteractWithPresenter.swift in Sources */,
 				7A8F42FD1FC75BCC00E57FAC /* UICollectionReusableView+ReuseIdentifier.swift in Sources */,
+				E1008FE42095FFC800510BF0 /* OnboardingPageNavigationCoordinator.swift in Sources */,
+				E1008FD62094DB1900510BF0 /* OnboardingPresenter.swift in Sources */,
 				E19111822086727300A88564 /* MenuViewModelFactory.swift in Sources */,
 				7AD563181FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift in Sources */,
 				7A8F42F41FC75BCC00E57FAC /* Interactor.swift in Sources */,
 				7A8F42FB1FC75BCC00E57FAC /* LoadingView.swift in Sources */,
+				E16717D5209DE1BE00F52635 /* OnboardingPageView.swift in Sources */,
 				7A8F42F61FC75BCC00E57FAC /* PresenterDelegate.swift in Sources */,
 				7A8F42F91FC75BCC00E57FAC /* ErrorView.swift in Sources */,
 				7A1DDF7D1FC96464000D21B7 /* FruitListViewController+PresenterDelegate.swift in Sources */,
@@ -759,6 +893,7 @@
 				7A1DDF751FC96464000D21B7 /* FruitListInteractor.swift in Sources */,
 				7A8F42EF1FC75BCC00E57FAC /* FruitDataNetworkService.swift in Sources */,
 				7A8F42811FC75AED00E57FAC /* AppDelegate.swift in Sources */,
+				E1008FD42094DADC00510BF0 /* OnboardingNavigationCoordinator.swift in Sources */,
 				7A8F42DC1FC75BCC00E57FAC /* MainPresenter.swift in Sources */,
 				E191117F2086724100A88564 /* MenuViewModel.swift in Sources */,
 				7A8F42EC1FC75BCC00E57FAC /* Functions.swift in Sources */,
@@ -769,6 +904,7 @@
 				7A1DDF741FC96464000D21B7 /* FruitListNavigationCoordinator.swift in Sources */,
 				E1C94DE02086710100F8AC74 /* Menu.swift in Sources */,
 				7A8F42DB1FC75BCC00E57FAC /* MainNavigationCoordinator.swift in Sources */,
+				E1008FE62096004200510BF0 /* OnboardingPagePresenter.swift in Sources */,
 				7A8F42D81FC75BCC00E57FAC /* DetailedViewerPresenter.swift in Sources */,
 				7AD563141FC9C6CA00215F55 /* NetworkServiceError.swift in Sources */,
 				7A1DDF7E1FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift in Sources */,
