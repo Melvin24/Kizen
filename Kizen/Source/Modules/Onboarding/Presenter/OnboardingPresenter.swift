@@ -12,28 +12,40 @@ class OnboardingPresenter: Presenter {
     
     weak var viewController: OnboardingPageViewController?
     
-    lazy var pages: [OnboardingPage] = [
-        self.onboardingPage(),
-        self.onboardingPage(),
-        self.onboardingPage()
-    ]
+    var pages: [OnboardingPage] = []
     
+    let rawValue: [Exercise]
+    let exerciseViewModels: [ExerciseViewModel]
+    
+    init(exercises: [Exercise]) {
+        self.rawValue = exercises
+        self.exerciseViewModels = ExerciseViewModelsFactory().makeExerciseViewModels(fromExercises: exercises)
+        
+    }
     func loadIfRequired() {
-        _ = pages
+        loadOnboardingPages()
     }
     
-    func onboardingPage() -> OnboardingPage {
-
-        guard let viewController = self.viewController,
-            let destination = UIStoryboard.instantiateViewControllerFromStoryboard(withName: OnboardingPage.Storyboard.name) as? OnboardingPage else {
-                fatalError("should instantiate OnboardingPage")
+    private func loadOnboardingPages() {
+        
+        let pages = exerciseViewModels.compactMap { (exerciseViewModel: ExerciseViewModel) -> OnboardingPage? in
+            
+            guard let viewController = self.viewController,
+                let destination = UIStoryboard.instantiateViewControllerFromStoryboard(withName: OnboardingPage.Storyboard.name) as? OnboardingPage else {
+                    return nil
+            }
+            
+            
+            let coordinator = OnboardingPageNavigationCoordinator(source: viewController,
+                                                                  destination: destination,
+                                                                  exerciseViewModel: exerciseViewModel)
+            
+            coordinator.prepareForNavigation()
+            
+            return destination
         }
-        
-        let coordinator = OnboardingPageNavigationCoordinator(source: viewController, destination: destination)
-        
-        coordinator.prepareForNavigation()
 
-        return destination
+        self.pages += pages
         
     }
 }

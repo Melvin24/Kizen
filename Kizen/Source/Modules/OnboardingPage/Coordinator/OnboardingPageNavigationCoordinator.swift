@@ -12,10 +12,11 @@ struct OnboardingPageNavigationCoordinator: Coordinatable {
     
     let source: OnboardingPageViewController
     let destination: OnboardingPage
+    let exerciseViewModel: ExerciseViewModel
     
     func prepareForNavigation() {
         
-        let presenter = OnboardingPagePresenter()
+        let presenter = OnboardingPagePresenter(exerciseViewModel: exerciseViewModel)
         
         presenter.viewController = destination
         

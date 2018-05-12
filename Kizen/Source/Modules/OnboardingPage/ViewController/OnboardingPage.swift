@@ -19,21 +19,22 @@ class OnboardingPage: UIViewController, CanInteractWithPresenter {
     override func viewDidLoad(){
         super.viewDidLoad()
         
-        setupSubview()
+        setupOnboardingPageView()
         
         presenter.loadIfRequired()
     }
     
-    func setupSubview() {
+    func setupOnboardingPageView() {
         
-
+        onboardingPageView.exerciseNameLabel.text = presenter.exerciseViewModel.name
+        
         view.insertSubview(onboardingPageView, at: 0)
-//        onboardingPageView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        onboardingPageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-//        onboardingPageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//        onboardingPageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//        onboardingPageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        onboardingPageView.translatesAutoresizingMaskIntoConstraints = false
+
+        onboardingPageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        onboardingPageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        onboardingPageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        onboardingPageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
     }
 }

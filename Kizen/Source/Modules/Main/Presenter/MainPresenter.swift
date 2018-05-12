@@ -23,7 +23,7 @@ class MainPresenter: Presenter {
         
         let fruitViewModel = FruitViewModel(fruit: Fruit(price: 12, type: .apple, weight: 12, image: nil, name: "apple"))
         
-        let tabBarViewControllers: [UIViewController] = menuItems.flatMap {
+        let tabBarViewControllers: [UIViewController] = menuItems.compactMap {
             
             guard let tabBarViewController = viewControllerFactory.makeViewController(from: $0.menuType) as? DetailedViewerViewController else {
                 return nil

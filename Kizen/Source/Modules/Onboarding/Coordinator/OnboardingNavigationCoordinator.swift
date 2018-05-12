@@ -11,10 +11,11 @@ import UIKit
 struct OnboardingNavigationCoordinator: Coordinatable {
     
     let destination: OnboardingPageViewController
-    
+    let exercises: [Exercise]
+
     func prepareForNavigation() {
         
-        let presenter = OnboardingPresenter()
+        let presenter = OnboardingPresenter(exercises: exercises)
         
         presenter.viewController = destination
         

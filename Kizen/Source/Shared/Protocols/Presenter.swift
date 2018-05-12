@@ -10,7 +10,7 @@ protocol Presenter: class {
     associatedtype viewController: UIViewController
     
     /// Associated view controller.
-    weak var viewController: viewController? { get set }
+    var viewController: viewController? { get set }
     
     /// Call this method to load any required data.
     func loadIfRequired()

@@ -17,7 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
         
-        let navigationCoordinator = OnboardingNavigationCoordinator(destination: onboardingPageViewController)
+        let exercises = [
+            Exercise(name: "Deadlift", image: .deadliftImage),
+            Exercise(name: "Bench", image: .benchImage),
+            Exercise(name: "Squat", image: .squatImage)
+        ]
+        
+        let navigationCoordinator = OnboardingNavigationCoordinator(destination: onboardingPageViewController, exercises: exercises)
         
         navigationCoordinator.prepareForNavigation()
         

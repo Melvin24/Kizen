@@ -7,10 +7,10 @@ import UIKit
 protocol CanShowStatusView: class {
     
     /// Status view.
-    weak var statusView: UIView? { get set }
+    var statusView: UIView? { get set }
     
     /// Container view to add status view.
-    weak var statusContainerView: UIView? { get set }
+    var statusContainerView: UIView? { get set }
     
 }
 

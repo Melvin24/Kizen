@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OPp-m0-fcK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y02-Kh-0o2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Onboarding Page View Controller-->
-        <scene sceneID="zbB-Sv-zhu">
+        <scene sceneID="o64-dc-497">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="OPp-m0-fcK" customClass="OnboardingPageViewController" customModule="Kizen" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y3d-2A-Nvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="y02-Kh-0o2" customClass="OnboardingPageViewController" customModule="Kizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wQn-qH-eLd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RFC-LY-N9K">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gLp-ip-CaR"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cpx-CI-emC" firstAttribute="bottom" secondItem="RFC-LY-N9K" secondAttribute="bottom" id="6Md-3p-BSE"/>
+                            <constraint firstItem="Cpx-CI-emC" firstAttribute="trailing" secondItem="RFC-LY-N9K" secondAttribute="trailing" id="M40-A3-JPN"/>
+                            <constraint firstItem="RFC-LY-N9K" firstAttribute="leading" secondItem="Cpx-CI-emC" secondAttribute="leading" id="duN-Hz-NBy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cpx-CI-emC"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="RFC-LY-N9K"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IR7-9Q-mig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="99"/>
+            <point key="canvasLocation" x="207" y="28"/>
         </scene>
     </scenes>
 </document>

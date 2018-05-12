@@ -12,7 +12,14 @@ class OnboardingPagePresenter: Presenter {
     
     weak var viewController: OnboardingPage?
     
+    let exerciseViewModel: ExerciseViewModel
+    
+    init(exerciseViewModel: ExerciseViewModel) {
+        self.exerciseViewModel = exerciseViewModel
+    }
+    
     func loadIfRequired() {
         
     }
+    
 }

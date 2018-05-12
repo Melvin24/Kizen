@@ -66,6 +66,11 @@
 		E1188E922094C50600D2F61B /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1188E912094C50600D2F61B /* Onboarding.storyboard */; };
 		E1188E942094C53500D2F61B /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1188E932094C53500D2F61B /* OnboardingPageViewController.swift */; };
 		E126608A20891D320039F2F9 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E126608920891D320039F2F9 /* ViewControllerFactory.swift */; };
+		E15E9F6120A42CBE00ED629A /* OnboardingPageViewController+UIPageViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E9F6020A42CBE00ED629A /* OnboardingPageViewController+UIPageViewControllerDataSource.swift */; };
+		E15E9F6420A4D37300ED629A /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E9F6320A4D37300ED629A /* Exercise.swift */; };
+		E15E9F6620A4D51A00ED629A /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E9F6520A4D51A00ED629A /* ExerciseViewModel.swift */; };
+		E15E9F6920A4D56600ED629A /* ExerciseViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E9F6820A4D56600ED629A /* ExerciseViewModelFactory.swift */; };
+		E15E9F6C20A4D96400ED629A /* ExerciseViewModelsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E9F6B20A4D96400ED629A /* ExerciseViewModelsFactory.swift */; };
 		E16717D5209DE1BE00F52635 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16717D3209DE1BE00F52635 /* OnboardingPageView.swift */; };
 		E16717D6209DE1BE00F52635 /* OnboardingPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16717D4209DE1BE00F52635 /* OnboardingPageView.xib */; };
 		E191117F2086724100A88564 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191117E2086724100A88564 /* MenuViewModel.swift */; };
@@ -151,6 +156,11 @@
 		E1188E912094C50600D2F61B /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E1188E932094C53500D2F61B /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		E126608920891D320039F2F9 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		E15E9F6020A42CBE00ED629A /* OnboardingPageViewController+UIPageViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingPageViewController+UIPageViewControllerDataSource.swift"; sourceTree = "<group>"; };
+		E15E9F6320A4D37300ED629A /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		E15E9F6520A4D51A00ED629A /* ExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModel.swift; sourceTree = "<group>"; };
+		E15E9F6820A4D56600ED629A /* ExerciseViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModelFactory.swift; sourceTree = "<group>"; };
+		E15E9F6B20A4D96400ED629A /* ExerciseViewModelsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModelsFactory.swift; sourceTree = "<group>"; };
 		E16717D3209DE1BE00F52635 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		E16717D4209DE1BE00F52635 /* OnboardingPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingPageView.xib; sourceTree = "<group>"; };
 		E191117E2086724100A88564 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -554,6 +564,8 @@
 		E1008FD72095FCF800510BF0 /* OnboardingPage */ = {
 			isa = PBXGroup;
 			children = (
+				E15E9F6720A4D55000ED629A /* Factories */,
+				E15E9F6220A4D36300ED629A /* Model */,
 				E1008FE12095FFAB00510BF0 /* Coordinator */,
 				E1008FDC2095FCF800510BF0 /* Interactor */,
 				E1008FD92095FCF800510BF0 /* Presenter */,
@@ -615,6 +627,7 @@
 		E1188E892094C45300D2F61B /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				E15E9F6A20A4D95200ED629A /* Factories */,
 				E1188E8B2094C4C400D2F61B /* Coordinator */,
 				E1188E8C2094C4C400D2F61B /* Presenter */,
 				E1188E902094C4EB00D2F61B /* Storyboard */,
@@ -643,6 +656,7 @@
 			isa = PBXGroup;
 			children = (
 				E1188E932094C53500D2F61B /* OnboardingPageViewController.swift */,
+				E15E9F6020A42CBE00ED629A /* OnboardingPageViewController+UIPageViewControllerDataSource.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -659,6 +673,31 @@
 			isa = PBXGroup;
 			children = (
 				E126608920891D320039F2F9 /* ViewControllerFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		E15E9F6220A4D36300ED629A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E15E9F6320A4D37300ED629A /* Exercise.swift */,
+				E15E9F6520A4D51A00ED629A /* ExerciseViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E15E9F6720A4D55000ED629A /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				E15E9F6820A4D56600ED629A /* ExerciseViewModelFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		E15E9F6A20A4D95200ED629A /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				E15E9F6B20A4D96400ED629A /* ExerciseViewModelsFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -794,7 +833,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "John, Melvin (Associate Software Developer)";
 				TargetAttributes = {
 					7A8F42551FC75A3400E57FAC = {
@@ -864,6 +903,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD563121FC9C2EA00215F55 /* UsageStatsNetworkService.swift in Sources */,
+				E15E9F6620A4D51A00ED629A /* ExerciseViewModel.swift in Sources */,
 				7A1DDF7F1FC96464000D21B7 /* FruitListViewController.swift in Sources */,
 				7A8F42F71FC75BCC00E57FAC /* Reuseable.swift in Sources */,
 				7A1DDF771FC96464000D21B7 /* CollectionViewDelegate.swift in Sources */,
@@ -876,10 +916,12 @@
 				7A8F42DE1FC75BCC00E57FAC /* MainTabBarController.swift in Sources */,
 				7A8F42F31FC75BCC00E57FAC /* Coordinatable.swift in Sources */,
 				7A8F43111FC76B8600E57FAC /* Result.swift in Sources */,
+				E15E9F6C20A4D96400ED629A /* ExerciseViewModelsFactory.swift in Sources */,
 				7A1DDF791FC96464000D21B7 /* FruitListPresenter.swift in Sources */,
 				7A8F42F11FC75BCC00E57FAC /* CanInteractWithPresenter.swift in Sources */,
 				7A8F42FD1FC75BCC00E57FAC /* UICollectionReusableView+ReuseIdentifier.swift in Sources */,
 				E1008FE42095FFC800510BF0 /* OnboardingPageNavigationCoordinator.swift in Sources */,
+				E15E9F6420A4D37300ED629A /* Exercise.swift in Sources */,
 				E1008FD62094DB1900510BF0 /* OnboardingPresenter.swift in Sources */,
 				E19111822086727300A88564 /* MenuViewModelFactory.swift in Sources */,
 				7AD563181FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift in Sources */,
@@ -904,6 +946,7 @@
 				7A1DDF741FC96464000D21B7 /* FruitListNavigationCoordinator.swift in Sources */,
 				E1C94DE02086710100F8AC74 /* Menu.swift in Sources */,
 				7A8F42DB1FC75BCC00E57FAC /* MainNavigationCoordinator.swift in Sources */,
+				E15E9F6120A42CBE00ED629A /* OnboardingPageViewController+UIPageViewControllerDataSource.swift in Sources */,
 				E1008FE62096004200510BF0 /* OnboardingPagePresenter.swift in Sources */,
 				7A8F42D81FC75BCC00E57FAC /* DetailedViewerPresenter.swift in Sources */,
 				7AD563141FC9C6CA00215F55 /* NetworkServiceError.swift in Sources */,
@@ -913,6 +956,7 @@
 				7A8F42FE1FC75BCC00E57FAC /* UICollectionView+Register.swift in Sources */,
 				7A30F0301FC9F43D003423A9 /* SupportDisaplyUsageStatsUpdate.swift in Sources */,
 				7A8F43001FC75BCC00E57FAC /* UIView+Initialize.swift in Sources */,
+				E15E9F6920A4D56600ED629A /* ExerciseViewModelFactory.swift in Sources */,
 				7A8F42D71FC75BCC00E57FAC /* DetailedViewerNavigationCoordinator.swift in Sources */,
 				7A8F42FF1FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift in Sources */,
 			);
@@ -966,6 +1010,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -973,6 +1018,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1023,6 +1069,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1030,6 +1077,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

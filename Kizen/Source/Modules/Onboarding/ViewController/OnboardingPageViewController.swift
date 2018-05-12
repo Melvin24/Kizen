@@ -8,73 +8,66 @@
 
 import UIKit
 
-class OnboardingPageViewController: UIPageViewController, CanInteractWithPresenter{
+class OnboardingPageViewController: UIViewController, CanInteractWithPresenter{
     
     var presenter: OnboardingPresenter!
+    
+//    @IBOutlet var pageControl: UIPageControl!
+    
+    lazy var pageViewController: UIPageViewController = {
+        return UIPageViewController(transitionStyle: .scroll,
+                                    navigationOrientation: .horizontal,
+                                    options: nil)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        delegate = self
-        dataSource = self
+        setupPageViewController()
+        setupPageControl()
         
         presenter.loadIfRequired()
-        
+
         if let firstOnboardPage = presenter.pages.first {
-            setViewControllers([firstOnboardPage], direction: .forward, animated: true)
+//            pageControl.currentPage = 0
+            pageViewController.setViewControllers([firstOnboardPage], direction: .forward, animated: true)
         }
+
+    }
+    
+    func setupPageViewController() {
+        addChildViewController(pageViewController)
+        
+        view.addSubview(pageViewController.view)
+        
+        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.topAnchor.constraint(equalTo: pageViewController.view.topAnchor).isActive = true
+        view.leadingAnchor.constraint(equalTo: pageViewController.view.leadingAnchor).isActive = true
+        view.trailingAnchor.constraint(equalTo: pageViewController.view.trailingAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: pageViewController.view.bottomAnchor).isActive = true
+        
+        pageViewController.delegate = self
+        pageViewController.dataSource = self
+                
+    }
+    
+    func setupPageControl() {
+        let apparence = UIPageControl.appearance()
+//        pageControl.numberOfPages = presenter.pages.count
+//
+        apparence.pageIndicatorTintColor = .lightGray
+        apparence.currentPageIndicatorTintColor = .darkGray
+        apparence.backgroundColor = nil
     }
     
 }
 
-extension OnboardingPageViewController: UIPageViewControllerDataSource {
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        
-        guard let currentViewController = viewController as? OnboardingPage,
-            let viewControllerIndex = presenter.pages.index(of: currentViewController) else {
-                return nil
-        }
-        
-        let previousIndex = viewControllerIndex - 1
-        
-        guard previousIndex >= 0 else {
-            return presenter.pages.last
-        }
-        
-        guard presenter.pages.count > previousIndex else {
-            return nil
-        }
-        
-        return presenter.pages[previousIndex]
-    }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
-        guard let currentViewController = viewController as? OnboardingPage,
-            let viewControllerIndex = presenter.pages.index(of: currentViewController) else {
-            return nil
-        }
-        
-        let nextIndex = viewControllerIndex + 1
-        
-        guard nextIndex < presenter.pages.count else {
-            return presenter.pages.first
-        }
-        
-        guard presenter.pages.count > nextIndex else {
-            return nil
-            
-        }
-        
-        return presenter.pages[nextIndex]
-        
-    }
-    
-    
-}
+
 
 extension OnboardingPageViewController: UIPageViewControllerDelegate {
     
+
 }
 
 extension OnboardingPageViewController {
